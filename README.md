@@ -1,2 +1,0 @@
-# SolleyN.github.io
-website
