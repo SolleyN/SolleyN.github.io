@@ -7,7 +7,7 @@
   <meta name="author" content="" />
   <title>Nickolas Solley</title>
   <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
   <!-- Font Awesome icons (free version)-->
   <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
   <!-- Google fonts-->
@@ -29,7 +29,7 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
+        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact Me</a></li>
       </ul>
     </div>
   </div>
@@ -38,9 +38,10 @@
 <header class="masthead bg-dark text-white text-center">
   <div class="container d-flex align-items-center flex-column">
     <!-- Masthead Avatar Image-->
-    <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+<!--    <img class="masthead-avatar mb-5" src="/img/logo.png" alt="nickolas brand" />-->
     <!-- Masthead Heading-->
-    <h1 class="masthead-heading text-uppercase mb-0">Personal Site</h1>
+    <h1 class="masthead-heading text-uppercase mb-0">Nickolas Solley</h1>
+
     <!-- Icon Divider-->
     <div class="divider-custom divider-light">
       <div class="divider-custom-line"></div>
@@ -134,8 +135,8 @@
     </div>
     <!-- About Section Content-->
     <div class="row">
-      <div class="col-lg-4 ms-auto"><p class="lead"></p></div>
-      <div class="col-lg-4 me-auto"><p class="lead"></p></div>
+      <div class=" text-center"><p class="lead">I am a United States Marine Corps veteran full stack web developer with a passion for learning new technology. I have experience with HTML - CSS - Bootstrap - Tailwind CSS -  JavaScript - jQuery - Java SE - Java EE (Servlets, JSP) - Spring - ThymeLeaf - MySQL - Object-Oriented Programming - Test-Driven Development - Version Control with Git - Paired Programming - Microsoft PowerPoint, Excel, Word.</p></div>
+
     </div>
     <!-- About Section Button-->
     <div class="text-center mt-4">
@@ -152,65 +153,33 @@
     <!-- Icon Divider-->
     <div class="divider-custom">
       <div class="divider-custom-line"></div>
-      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+      <div class="divider-custom-icon"><i class="fas fa-flask"></i></div>
       <div class="divider-custom-line"></div>
     </div>
     <!-- Contact Section Form-->
-    <div class="row justify-content-center">
-      <div class="col-lg-8 col-xl-7">
-        <!-- * * * * * * * * * * * * * * *-->
-        <!-- * * SB Forms Contact Form * *-->
-        <!-- * * * * * * * * * * * * * * *-->
-        <!-- This form is pre-integrated with SB Forms.-->
-        <!-- To make this form functional, sign up at-->
-        <!-- https://startbootstrap.com/solution/contact-forms-->
-        <!-- to get an API token!-->
-        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-          <!-- Name input-->
-          <div class="form-floating mb-3">
-            <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-            <label for="name">Full name</label>
-            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-          </div>
-          <!-- Email address input-->
-          <div class="form-floating mb-3">
-            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-            <label for="email">Email address</label>
-            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-          </div>
-          <!-- Phone number input-->
-          <div class="form-floating mb-3">
-            <input class="form-control" id="phone" type="tel" placeholder="(555) 555-5555" data-sb-validations="required" />
-            <label for="phone">Phone number</label>
-            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-          </div>
-          <!-- Message input-->
-          <div class="form-floating mb-3">
-            <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-            <label for="message">Message</label>
-            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-          </div>
-          <!-- Submit success message-->
-          <!---->
-          <!-- This is what your users will see when the form-->
-          <!-- has successfully submitted-->
-          <div class="d-none" id="submitSuccessMessage">
-            <div class="text-center mb-3">
-              <div class="fw-bolder">Form submission successful!</div>
-
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form method="post" name="contact_form" action="contact-form-handler.php">
+            <div class="form-group">
+              <label for="name" class="bg-white ">Your Name:</label>
+              <input type="text" class="form-control" id="name" name="name" required>
             </div>
-          </div>
-          <!-- Submit error message-->
-          <!---->
-          <!-- This is what your users will see when there is-->
-          <!-- an error submitting the form-->
-          <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-          <!-- Submit Button-->
-          <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
-        </form>
+            <div class="form-group">
+              <label for="email">Email Address:</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary d-flex justify-content-center mx-auto mt-3">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
+
+  </div>
   </div>
 </section>
 <!-- Footer-->
@@ -236,7 +205,7 @@
       <div class="col-lg-4">
         <h4 class="text-uppercase mb-4">About me</h4>
         <p class="lead mb-0">
-    I am a full stack web developer with a passion for learning new technology.
+
         </p>
       </div>
     </div>
@@ -267,7 +236,7 @@
               <!-- Portfolio Modal - Image-->
               <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
               <!-- Portfolio Modal - Text-->
-              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <p class="mb-4">Some personal Projects at Codeup</p>
               <button class="btn btn-primary" data-bs-dismiss="modal">
                 <i class="fas fa-xmark fa-fw"></i>
                 Close Window
@@ -289,7 +258,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-8">
               <!-- Portfolio Modal - Title-->
-              <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Movies Project</h2>
+              <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Movie Project</h2>
               <!-- Icon Divider-->
               <div class="divider-custom">
                 <div class="divider-custom-line"></div>
@@ -299,7 +268,7 @@
               <!-- Portfolio Modal - Image-->
               <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
               <!-- Portfolio Modal - Text-->
-              <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+              <p class="mb-4">A website utilizing a IMDB API to access movie data and details and stores them in a firebase database.</p>
               <button class="btn btn-primary" data-bs-dismiss="modal">
                 <i class="fas fa-xmark fa-fw"></i>
                 Close Window
@@ -421,7 +390,7 @@
               <!-- Icon Divider-->
               <div class="divider-custom">
                 <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-icon"><i class="fas fa-flask"></i></div>
                 <div class="divider-custom-line"></div>
               </div>
               <!-- Portfolio Modal - Image-->
@@ -439,10 +408,13 @@
     </div>
   </div>
 </div>
+
+</script>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
+<!-- Scripts -->
 <script src="script.js"></script>
+
 
 <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 </body>
